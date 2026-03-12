@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Clubhouse | Facilities</title>
+    
+    <style>
+        /* ============================================================
+           1. Basic Settings (Identical to the homepage)
+           ============================================================ */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0; 
+            padding: 0;
+        }
+
+        h1, h2, h3 { color: #001f3f; }
+
+        header {
+            background-color: #001f3f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFD700;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            background-color: #FFD700;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 20px;
+        }
+
+        nav a {
+            color: #001f3f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover { color: white; }
+
+        /* ============================================================
+           2. Clubhouse Specific Layout: Facility Cards
+           ============================================================ */
+        .facilities-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;        /* Automatically stacks vertically on mobile screens */
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: white;
+            border: 3px solid #001f3f;
+            width: 300px;           /* Fixed card width */
+            padding: 20px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #FFD700;
+            margin-bottom: 15px;
+        }
+
+        /* ============================================================
+           3. Booking Form Section
+           ============================================================ */
+        .booking-section {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+
+        .booking-section h2 { color: #FFD700; }
+
+        .booking-form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .booking-form input, .booking-form select {
+            padding: 12px;
+            font-size: 16px;
+            border: 2px solid #FFD700;
+        }
+
+        .btn {
+            background-color: #FFD700;
+            color: #001f3f;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #001f3f;
+        }
+
+       /* ============================================================
+           4. 底部 Footer
+           ============================================================ */
+        footer {
+            background-color: #001f3f;
+            color: white;
+            padding: 40px 20px;
+            display: flex; 
+            flex-wrap: wrap;        
+            justify-content: center; /* 让里面的区块整体居中 */
+            gap: 40px; /* 两个区块之间的距离 */
+        }
+
+        /* 这是最关键的魔法：给它们一个固定的宽度，并强制靠左对齐 */
+        .footer-links, .contact-info {
+            width: 250px;       /* 限制宽度，这样手机屏幕一窄，它们就会乖乖上下叠起来 */
+            text-align: left;   /* 强制里面的标题和文字全部靠左看齐！ */
+        }
+
+        footer h4 { color: #FFD700; margin-bottom: 15px; font-size: 20px; }
+        footer a { color: white; text-decoration: none; display: block; margin-bottom: 10px; }
+        footer a:hover { color: #FFD700; text-decoration: underline; }
+        .contact-info p { margin: 5px 0; opacity: 0.9; }
+
+        /* 版权信息居中 */
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ZENITH CLUBHOUSE</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="announcement.html">Announcements</a>
+        <a href="event-photo.html">Event Photos</a>
+        <a href="#pool_pic">Clubhouse</a>
+    </nav>
+
+    <section class="facilities-section">
+        <h2>Exclusive Facilities for Residents</h2>
+        <div style="width: 60px; height: 4px; background-color: #FFD700; margin: 0 auto;"></div>
+        
+        <div class="card-container">
+            <div class="card">
+                <img src="pool_pic.jpg" alt="Infinity Pool" id="pool_pic">
+                <h3>Infinity Pool</h3>
+                <p>Enjoy a relaxing swim with a stunning view of the sunset. Open daily from 7 AM to 10 PM.</p>
+            </div>
+            
+            <div class="card">
+                <img src="gym_pic.jpg" alt="Modern Gym">
+                <h3>Modern Gym</h3>
+                <p>Fully equipped with the latest treadmills, weights, and yoga mats.</p>
+            </div>
+            
+            <div class="card">
+                <img src="lounge_pic.jpg" alt="Resident Lounge">
+                <h3>Resident Lounge</h3>
+                <p>A quiet, air-conditioned space perfect for reading or working from home.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <h2>Book a Facility</h2>
+        <p>Please fill in the form below to reserve a slot.</p>
+        
+        <form class="booking-form" id="bookingForm">
+            <input type="text" id="userName" placeholder="Enter your full name">
+            <input type="text" id="unitNumber" placeholder="Enter your Unit Number (e.g., A-12-04)">
+            
+            <select id="facilitySelect">
+                <option value="">-- Choose a Facility --</option>
+                <option value="Infinity Pool">Infinity Pool</option>
+                <option value="Modern Gym">Modern Gym</option>
+                <option value="Resident Lounge">Resident Lounge</option>
+            </select>
+            
+            <button type="button" class="btn" onclick="checkBooking()">Submit Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <h4>Links</h4>
+            <a href="index.html">Home Page</a>
+            <a href="clubhouse.html">Clubhouse</a>
+             <a href="">Announcements</a>
+            <a href="">Event Photos</a>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <p>Management Office, Level 1</p>
+            <p>Zenith Neighbourhood, Park Avenue</p>
+            <p>Phone: +60 3-1234 5678</p>
+            <p>Email: contact@ZenithNeighbourhood.com</p>
+        </div>
+
+        <div class="footer-copyright">
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin-bottom: 20px;">
+            <p>&copy; Copyright 2026 Zenith Neighbourhood, Park Avenue, Kuala Lumpur, Malaysia | Zenith PDPA</p>
+        </div>
+    </footer>
+
+    <script>
+        function checkBooking() {
+            // Retrieve the values entered by the user
+            var name = document.getElementById("userName").value;
+            var unit = document.getElementById("unitNumber").value;
+            var facility = document.getElementById("facilitySelect").value;
+
+            // Basic form validation: Check if any required field is left blank
+            if (name === "" || unit === "" || facility === "") {
+                alert("Error: Please fill in all the blanks and choose a facility!");
+            } else {
+                // If all fields are properly filled, display a success alert and clear the form
+                alert("Success! Dear " + name + " (Unit: " + unit + "), your booking for the " + facility + " has been confirmed.");
+                document.getElementById("bookingForm").reset(); // Clears the input fields
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zenith Neighbourhood</title>
+    
+    <style>
+        /* ============================================================
+           [CSS Styles Section] - Responsible for web design and layout
+           ============================================================ */
+
+        /* 1. Global Basic Settings: Set font, background color, and reset margins */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0; 
+            padding: 0;
+        }
+
+        /* Set uniform dark blue color for all headings */
+        h1, h2, h3 {
+            color: #001f3f; 
+        }
+
+        /* 2. Header: Dark blue background with centered golden text */
+        header {
+            background-color: #001f3f;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            color: #FFD700; 
+            margin: 0;
+        }
+
+        /* 3. Navigation Bar (Nav): Golden background, using Flexbox to center items */
+        nav {
+            background-color: #FFD700;
+            padding: 15px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Key: Automatically wraps to next line on smaller screens (Mobile Responsive) */
+            gap: 20px;
+        }
+
+        nav a {
+            color: #001f3f;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Hover effect: Links turn white on mouseover */
+        nav a:hover {
+            color: white;
+        }
+
+        /* 4. Hero Image (First large picture): Full width, auto height, golden bottom border */
+        .hero-image {
+            width: 100%; 
+            height: auto; 
+            max-height: 500px; 
+            object-fit: cover; 
+            display: block;
+            border-bottom: 5px solid #FFD700; 
+        }
+
+        /* 5. Core Content Layout: Using Flexbox for "Text on Left, Image on Right" layout */
+        .content-section {
+            display: flex; 
+            flex-wrap: wrap; /* Core: Side-by-side on desktop, stacks vertically on mobile */
+            align-items: center; 
+            max-width: 1200px; 
+            margin: 60px auto; /* Centers the content section */
+            padding: 0 20px;
+            gap: 40px; 
+        }
+
+        /* Text Box: Takes 1 fraction of space, minimum width 300px to trigger mobile wrapping */
+        .text-box {
+            flex: 1; 
+            min-width: 300px; 
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        /* Image Box: Takes 1 fraction of space */
+        .pic-box {
+            flex: 1; 
+            min-width: 300px; 
+        }
+
+        .pic-box img {
+            width: 100%; 
+            height: auto;
+            border: 4px solid #FFD700; 
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.2); 
+        }
+
+        /* 6. Button Style: Dark blue background with golden text */
+        .btn {
+            background-color: #001f3f;
+            color: #FFD700;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #FFD700;
+            color: #001f3f;
+        }
+
+        /* 7. Footer: Dark blue background, flex layout for Links, Contact, and Copyright */
+       
+      footer {
+            background-color: #001f3f;
+            color: white;
+            padding: 40px 20px;
+            display: flex; 
+            flex-wrap: wrap;        
+            justify-content: center; /* 让里面的区块整体居中 */
+            gap: 40px; /* 两个区块之间的距离 */
+        }
+
+        /* 这是最关键的魔法：给它们一个固定的宽度，并强制靠左对齐 */
+        .footer-links, .contact-info {
+            width: 250px;       /* 限制宽度，这样手机屏幕一窄，它们就会乖乖上下叠起来 */
+            text-align: left;   /* 强制里面的标题和文字全部靠左看齐！ */
+        }
+
+        footer h4 { color: #FFD700; margin-bottom: 15px; font-size: 20px; }
+        footer a { color: white; text-decoration: none; display: block; margin-bottom: 10px; }
+        footer a:hover { color: #FFD700; text-decoration: underline; }
+        .contact-info p { margin: 5px 0; opacity: 0.9; }
+
+        /* 版权信息居中 */
+        .footer-copyright {
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Zenith Neighbourhood</h1>
+        <p id="greeting" style="color: white; font-size: 18px; margin-top: 10px;"></p>
+    </header>
+
+    <nav> 
+        <a href="#top-picture">Home</a>
+        <a href="announcement.html">Announcements</a> 
+        <a href="event-photo.html">Event Photos</a>
+        <a href="clubhouse.html">Clubhouse</a> 
+    </nav>
+
+    <img src="pic_1.jpg" alt="Plaza Arkadia Building" class="hero-image" id="top-picture">
+
+    <div class="content-section">
+        
+        <div class="text-box">
+            <h2 style="font-size: 32px;">Welcome to Our Neighbourhood</h2>
+            <div style="width: 60px; height: 4px; background-color: #FFD700; margin-bottom: 20px;"></div>
+            
+            <p>
+                Discover Zenith Neighbourhood, where modern luxury meets community warmth.
+                Relax at our premium Clubhouse or participate in exciting member activities like weekend markets and fitness classes.
+                Our dedicated photo-sharing platform allows residents to capture and celebrate special moments together. 
+                Join us in building a vibrant, and connected neighbourhood, you will love to call home. 
+            </p>
+
+            <p id="more-text" style="display: none; color: #001f3f; font-weight: bold;">
+                We also host weekly night markets and community sports events. It is a perfect place for families and friends!
+            </p>
+            
+            <button class="btn" onclick="toggleText()" id="read-btn">Read More</button>
+            <a href="clubhouse.html" class="btn" style="background-color: #FFD700; color: #001f3f;">Discover more</a>
+        </div>
+
+        <div class="pic-box">
+            <img src="pic_2.jpg" alt="Community Park">
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <h4>Links</h4>
+            <p><a href="#top-picture">Home Page</a></p>
+            <p><a href="clubhouse.html">Clubhouse</a></p>
+            <p><a href="announcement.html">Announcements</a></p>
+            <p><a href="event-photo.html">Event Photos</a></p>
+        </div>
+        
+        <div class="contact-info">
+            <h4>Contact Us</h4>
+            <p>Management Office, Level 1</p>
+            <p>Zenith Neighbourhood, Park Avenue</p>
+            <p>Phone: +60 3-1234 5678</p>
+            <p>Email: contact@ZenithNeighbourhood.com</p>
+        </div>
+
+        <div class="footer-copyright">
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin-bottom: 20px;">
+            <p>&copy; Copyright 2026 Zenith Neighbourhood, Park Avenue, Kuala Lumpur, Malaysia | Zenith PDPA</p>
+        </div>
+    </footer>
+
+    <script>
+        // Feature 1: Dynamic Greeting - Displays Good Morning, Afternoon, or Evening based on local computer time
+        function showGreeting() {
+            var date = new Date();
+            var hour = date.getHours();
+            var message;
+
+            if (hour < 12) {
+                message = "Good Morning!";
+            } else if (hour < 18) {
+                message = "Good Afternoon!";
+            } else {
+                message = "Good Evening!";
+            }
+
+            // Write the result into the HTML element with id="greeting"
+            document.getElementById("greeting").innerHTML = message + " Welcome to our neighbourhood.";
+        }
+        showGreeting(); // Run immediately when the webpage loads
+
+        // Feature 2: Expand/Collapse Text - Toggles the display state of additional info when the button is clicked
+        function toggleText() {
+            var textInfo = document.getElementById("more-text");
+            var button = document.getElementById("read-btn");
+
+            // If currently hidden, show it; otherwise, hide it
+            if (textInfo.style.display === "none") {
+                textInfo.style.display = "block";
+                button.innerHTML = "Read Less";
+            } else {
+                textInfo.style.display = "none";
+                button.innerHTML = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>
