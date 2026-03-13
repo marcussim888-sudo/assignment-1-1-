@@ -125,7 +125,7 @@
         }
 
        /* ============================================================
-           4.  Footer
+           4. 底部 Footer
            ============================================================ */
         footer {
             background-color: #001f3f;
@@ -133,14 +133,14 @@
             padding: 40px 20px;
             display: flex; 
             flex-wrap: wrap;        
-            justify-content: center; /* centre */
-            gap: 40px; 
+            justify-content: center; /* 让里面的区块整体居中 */
+            gap: 40px; /* 两个区块之间的距离 */
         }
 
-        
+        /* 这是最关键的魔法：给它们一个固定的宽度，并强制靠左对齐 */
         .footer-links, .contact-info {
-            width: 250px;      
-            text-align: left;   /* force text and headling align left */
+            width: 250px;       /* 限制宽度，这样手机屏幕一窄，它们就会乖乖上下叠起来 */
+            text-align: left;   /* 强制里面的标题和文字全部靠左看齐！ */
         }
 
         footer h4 { color: #FFD700; margin-bottom: 15px; font-size: 20px; }
@@ -148,6 +148,7 @@
         footer a:hover { color: #FFD700; text-decoration: underline; }
         .contact-info p { margin: 5px 0; opacity: 0.9; }
 
+        /* 版权信息居中 */
         .footer-copyright {
             width: 100%;
             text-align: center;
@@ -219,8 +220,8 @@
             <h4>Links</h4>
             <a href="index.html">Home Page</a>
             <a href="clubhouse.html">Clubhouse</a>
-             <a href="">Announcements</a>
-            <a href="">Event Photos</a>
+             <a href="announcement.html">Announcements</a>
+            <a href="event_photo.html">Event Photos</a>
         </div>
         
         <div class="contact-info">
@@ -255,5 +256,4 @@
         }
     </script>
 </body>
-
 </html>
