@@ -1,0 +1,93 @@
+* {box-sizing: border-box;
+}
+
+body {margin: 0; padding: 0%; overflow-x: hidden;
+      background-image: url(./Background\ img.png);
+}
+
+p {color: black
+}
+
+header {background-color: #001f3f;padding: 20px;
+        text-align: center;
+}
+        
+nav {text-align: center; display: flex; flex-direction: row;
+       gap: 10px; justify-content: center; flex-wrap: wrap;
+       padding: 15px; width: 100%;
+}
+
+nav a {color: black; font-weight: bold; font-size: 18px;
+}
+       
+nav a:hover { color: white; 
+}
+
+.news h3 {text-align: center; padding: 40px 20px;
+}
+
+.content {display: flex; justify-content: center; flex-direction: column; 
+        padding: 20px; width: 90%; margin: 5%; color: white; text-align: center;
+        gap: 10px; margin-top: 1px; 
+}
+
+.content-item {background-color: black; display: flex; 
+               flex-direction: column; align-items: center; padding: 20px; 
+               border-radius: 10px;
+}
+
+.content-item img {float: none; max-inline-size: 100%; max-width: 500px;
+                   width: 100%;
+}
+
+.content-item p {color: white; padding: 30px;
+                 margin: auto; text-align: left; font-size: 18px;
+}
+
+footer {background-color: #001f3f; color: white;
+        padding: 40px 20px; display: flex; 
+        flex-wrap: wrap; justify-content: space-around;
+        gap: 30px; 
+}
+
+footer h4 {color: #FFD700; margin-bottom: 15px; font-size: 20px; 
+            
+}
+
+footer a {color: white; text-decoration: none; display: block; 
+          margin-bottom: 10px;
+}
+
+footer a:hover {color: #FFD700; text-decoration: underline; 
+}
+
+.contact-info p {margin: 5px 0; opacity: 0.9; color: white; 
+}
+
+
+.footer-copyright {width: 100%; text-align: center; margin-top: 20px;
+                   font-size: 14px; opacity: 0.8;
+}
+
+.footer-copyright p {color: white;
+}
+
+@media (max-width: 900px) {
+        nav {flex-direction: column; padding: 10px; width: 100%; 
+        }
+
+        nav a {text-align: left; 
+        }
+
+        .content {width: auto; padding: 0px;}
+
+        footer {flex-direction: column; align-items: flex-start; justify-content: flex-start;
+        }
+
+        .footer-links {justify-content: flex-start; width: 100%;
+        }
+        /*Fixed the issue of imporper alignment*/
+        .footer-links h4, .footer-links a {text-align: left;
+        }
+        
+}
